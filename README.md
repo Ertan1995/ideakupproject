@@ -1,0 +1,2 @@
+# ideakupproject
+ideaküp canvas yapısı
