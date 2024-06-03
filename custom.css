@@ -1,0 +1,622 @@
+/* ----------------------------------------------------------------
+	Custom CSS
+
+	Add all your Custom Styled CSS here for New Styles or
+	Overwriting Default Theme Styles for Better Handling Updates
+-----------------------------------------------------------------*/
+
+
+/* ---------------- YENİ BUTTON CSS ----------------------- */
+.wrapper {
+	filter: url('#goo');
+	display: flex;
+	justify-content: space-around;
+}
+
+
+.buttonn {
+	display: inline-block;
+	text-align: center;
+	background: darkred;
+	color: whitesmoke;
+	font-weight: bold;
+	padding: 1.18em 1.32em 1.03em;
+	line-height: 1;
+	border-radius: 1em;
+	position: relative;
+	min-width: 8.23em;
+	text-decoration: none;
+	font-family: var(--font);
+	font-size: 1.25rem;
+}
+
+.buttonn:before,
+.buttonn:after {
+	width: 4.4em;
+	height: 2.95em;
+	position: absolute;
+	content: "";
+	display: inline-block;
+	background: darkred;
+	border-radius: 50%;
+	transition: 1s ease;
+	transform: scale(0);
+	z-index: -1;
+}
+
+.buttonn:before {
+	top: -25%;
+	left: 20%;
+}
+
+.buttonn:after {
+	bottom: -25%;
+	right: 20%;
+}
+
+.buttonn:hover:before,
+.buttonn:hover:after {
+	transform: none;
+}
+
+/* BUTON 2 */
+
+.buttonn2:before,
+.buttonn2:after {
+	border-radius: 25%;
+}
+
+/*BUTON 3 */
+.buttonn3:before,
+.buttonn3:after {
+	background: rgba(139, 0, 0, 0.3);
+	/* darkred'in rgba versiyonu */
+}
+
+
+/*BUTON 4 */
+
+.buttonn4 {
+	display: inline-block;
+	text-align: center;
+	background: darkred;
+	color: whitesmoke;
+	font-weight: bold;
+	padding: 1.18em 1.32em 1.03em;
+	line-height: 1;
+	border-radius: 1em;
+	position: relative;
+	min-width: 8.23em;
+	text-decoration: none;
+	font-family: var(--font);
+	font-size: 1.25rem;
+}
+
+
+.buttonn4:before,
+.buttonn4:after {
+	width: 3.2em;
+	height: 2.95em;
+	position: absolute;
+	content: "";
+	display: inline-block;
+	background: darkred;
+	transition: 1s ease;
+	transform: scale(0);
+	z-index: -1;
+	border-radius: 15%;
+}
+
+.buttonn4:before {
+	top: -50%;
+	left: 31%;
+}
+
+.buttonn4:after {
+	bottom: -50%;
+	right: 30%;
+}
+
+.buttonn4:hover:before,
+.buttonn4:hover:after {
+	transform: none;
+}
+
+
+/*BUTON5*/
+
+.buttonn5 {
+	display: inline-block;
+	text-align: center;
+	background: darkred;
+	color: whitesmoke;
+	font-weight: bold;
+	padding: 1.18em 1.32em 1.03em;
+	line-height: 1;
+	border-radius: 1em;
+	position: relative;
+	min-width: 8.23em;
+	text-decoration: none;
+	font-family: var(--font, Arial, sans-serif);
+	font-size: 1.25rem;
+	transition: transform 0.3s ease, padding 0.3s ease;
+	/* Hover durumunda animasyon ekliyoruz */
+}
+
+
+.buttonn5:hover {
+	color: whitesmoke;
+	transform: scale(0.95);
+	/* Butonun küçülmesini sağlar */
+	padding: 0.9em 1.5em 0.8em;
+	/* Butonun genişlemesini ve yüksekliğinin azalmasını sağlar */
+}
+
+
+/*
+
+						/* 1. hoverbutton */
+.hoverbutton {
+	display: inline-block;
+	padding: 0.75rem 1.25rem;
+	border-radius: 10rem;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1rem;
+	letter-spacing: 0.15rem;
+	transition: all 0.3s;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	background-color: #0cf;
+}
+
+.hoverbutton:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #0cf;
+	border-radius: 10rem;
+	z-index: -2;
+}
+.hoverbutton:before {
+	content: "";
+	position: absolute;
+	box-sizing: border-box;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background-color: #008fb3;
+	transition: all 0.3s;
+	border-radius: 10rem;
+	z-index: -1;
+}
+.hoverbutton:hover {
+	color: #fff;
+}
+.hoverbutton:hover:before {
+	width: 100%;
+	transform: translateX(100%);
+}
+
+
+/* 2. hoverbutton2 */
+.hoverbutton2:before {
+	transform: translateX(-100%);
+}
+
+.hoverbutton2:hover:before {
+	width: 100%;
+	transform: translateX(0%);
+}
+
+/* 3. hoverbutton3 */
+.hoverbutton3:before {
+	
+	left: auto;
+	/* Sol taraftan ayrılarak pseudo-elementin sağa yerleşmesi için left'i otomatik olarak ayarlıyoruz */
+	right: 0;
+	/* Sağ taraftan başlaması için right kullanıyoruz */
+
+	transform: translateX(100%);
+}
+
+.hoverbutton3:hover:before {
+	width: 100%;
+	transform: translateX(0%);
+}
+
+
+/*hover Button 4 */
+
+.hoverbutton4:after {
+	content: "";
+	position: absolute;
+	top: -100%;
+	/* Yukarıdan başlayacak, butonun tam üzerinde */
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* Başlangıçta yükseklik tam buton yüksekliği kadar olacak */
+	background-color: #008fb3;
+	color: white;
+	transition: top 0.3s;
+	/* Top değeri ile animasyon yapacağız */
+	z-index: -1;
+}
+
+.hoverbutton4:hover {
+	color: white;
+}
+
+.hoverbutton4:hover:after {
+	top: 0;
+	/* Hover durumunda yüksekliği 0'a çekerek yukarıdan aşağıya inmesini sağlıyoruz */
+}
+
+/*hover buton 5 */
+
+
+/* 5. hoverbutton5 */
+/* 5. hoverbutton5 */
+.hoverbutton5 {
+	display: inline-block;
+	padding: 0.75rem 1.25rem;
+	border-radius: 10rem;
+	color: #d5d4d4;
+	/* Yazı rengi varsayılan olarak siyah */
+	text-transform: uppercase;
+	font-size: 1rem;
+	letter-spacing: 0.15rem;
+	transition: all 0.3s;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	background-color: #0cf;
+}
+
+.hoverbutton5:before {
+	content: "";
+	position: absolute;
+	top: 100%;
+	/* Aşağıdan başlayacak, butonun tam altında */
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #008fb3;
+	transition: top 0.3s;
+	/* Top değeri ile animasyon yapacağız */
+	z-index: -1;
+}
+
+.hoverbutton5:hover {
+	color: white;
+}
+
+.hoverbutton5:hover:before {
+	top: 0;
+	/* Hover durumunda yüksekliği 0'a çekerek aşağıdan yukarıya çıkmasını sağlıyoruz */
+}
+
+/* 3.buton bölümü */
+
+.btn {
+	height: 60px;
+	width: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.8s ease;
+	position: relative;
+	border: 2px solid #111;
+	margin: 0 40px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.btn::before,
+.btn::after {
+	position: absolute;
+	display: block;
+	content: "";
+	width: 100%;
+	height: 100%;
+}
+
+.btn7 {
+	border: none;
+}
+
+.btn7:before,
+.btn7:after {
+	border: 2px solid #111;
+	transition: all 100ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.btn7:hover:after {
+	width: 63px;
+	animation: anim7a 1.5s infinite linear;
+}
+
+.btn7:hover:before {
+	width: 63px;
+	animation: anim7b 1.5s infinite linear;
+}
+
+@keyframes anim7a {
+	from {
+		transform: rotate(0turn);
+	}
+
+	to {
+		transform: rotate(1turn);
+	}
+}
+
+@keyframes anim7b {
+	from {
+		transform: rotate(0.125turn);
+	}
+
+	to {
+		transform: rotate(1.125turn);
+	}
+}
+
+/* 3.butonun 2.hali */
+
+.btn7-2:hover:after {
+	width: 63px;
+	animation: anim7aa 1.5s infinite linear;
+}
+
+.btn7-2:hover:before {
+	width: 63px;
+	animation: anim7ba1.5s infinite linear;
+}
+
+@keyframes anim7aa {
+	from {
+		transform: rotate(0turn);
+	}
+
+	to {
+		transform: rotate(1turn);
+	}
+}
+
+@keyframes anim7ba {
+	from {
+		transform: rotate(-0.125turn);
+	}
+
+	to {
+		transform: rotate(-1.125turn);
+	}
+}
+/* 4. Row Css */
+.wrap {
+	perspective: 400px;
+}
+.anim-button {
+	margin: 20px;
+	padding: 10px;
+	display: inline-block;
+	position: relative;
+	padding-inline: green;
+	padding-block: brown;
+	font-size: 1.7rem;
+	border-radius: 0.5rem;
+	background-color: rgb(5, 187, 168);
+	color: whitesmoke;
+	box-shadow: 0px 0px 0px gray;
+	border: none;
+	outline: none;
+	transform: translateZ(0);
+	transition: all 0.2 ease;
+}
+.anim-button:hover {
+	top: -10px;
+	transition: 0.3s;
+	box-shadow: 0px 10px 20px gray;
+	transform: rotateZ(2deg);
+}
+.anim-button:active {
+	top: 0px;
+	box-shadow: 0px 0px 0px gray;
+}
+/* 4. Row 2. Button CSS */
+.anim-button2:hover {
+	transform: rotateX(7deg);
+}
+
+
+/* 5. ROW */
+
+.effect {
+	text-align: center;
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	color: #fff;
+	text-transform: capitalize;
+	background-color: #000046;
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+	padding: 20px 0px;
+	width: 150px;
+	border-radius: 6px;
+	overflow: hidden;
+	transition: all 0.2s linear 0s;
+}
+.effect:before {
+	content: "\eb1b";
+	font-size: 15px;
+	font-family: "font-icons";
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	opacity: 0;
+	height: 100%;
+	width: 40px;
+	transition: all 0.2s linear 0s;
+}
+.effect:hover{
+	color: white;
+}
+.effect:hover::before{
+	opacity: 1;
+	text-indent: 0px;
+}
+/* effect-1 styles */
+
+.effect-1:hover {
+	text-indent: 20px;
+}
+.effect.effect-1:before{
+	left: 0;
+}
+/* effect-2 styles */
+.effect-2:before {
+	right: 0;
+}
+.effect-2:hover {
+	text-indent: -20px;
+}
+
+
+
+
+
+
+/* 6. ROW CSS */
+
+.click-btn {
+	display: flex;
+	font-family: "font-icons";
+	width: 120px;
+	height: 40px;
+	justify-content: center;
+	align-items: center;
+	margin: 0.5rem;
+	line-height: 35px;
+	border: 1px solid;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 16px;
+	color: #000;
+	text-decoration: none;
+	transition: all 0.35s;
+	box-sizing: border-box;
+	position: relative;
+	background-color: #dd7e2a;
+	border-color: #dd7e2a;
+	color: #fff;
+	overflow: hidden;
+}
+.click-btn span {
+	font-family: "font-icons";
+	transition: all 0.25s;
+	position: relative;
+}
+.click-btn::before,
+.click-btn::after {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	background-color: rgba(223, 183, 148, 0.73);
+	transition: all 0.25s;
+	color: #fff;
+
+}
+.click-btn::before {
+	width: 25px;
+	content: "\f007"; /* FONT AWESOME İCONLARININ CONTENT CODLARI İLE DEĞİŞTİRİLEBİLİR*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "FontAwesome";
+	font-size: 10px;
+	font-weight: bold;
+	text-indent: 5px;
+	z-index: 1;
+}
+.click-btn::after {
+	width: 100%;
+	transform: translate(100%, 0);
+	content: attr(data-hover);
+	text-indent: 8px;
+}
+.click-btn:hover {
+	border-color: rgba(223, 183, 148, 0.73);
+}
+
+
+/* Click butonun sağ yada soldan efektli olmasını alttaki cssler ile ayarlıyoruz */
+
+.btn-style904 span {
+	left: -0.5em;
+}
+.btn-style904::before,
+.btn-style904::after {
+	right: 0;
+}
+.btn-style904::before {
+	border-radius: 50% 0 0 50%;
+}
+.btn-style904::after {
+	text-align: left;
+}
+.btn-style904:hover span {
+	left: -100%;
+}
+.btn-style904:hover::before {
+	right: 70%;
+}
+.btn-style904:hover::after {
+	right: 70%;
+}
+
+/* ------------     btn-style905 CSS   -------------------- */
+
+
+.btn-style905 span {
+	right: -0.5em;/*değişti*/
+}
+.btn-style905::before,
+.btn-style905::after {
+	left: 0;/*değişti*/
+}
+.btn-style905::before {
+	border-radius: 0 50% 50% 0;/*değişti*/
+}
+.btn-style905::after {
+	transform: translate(-100%, 0);/*değişti*/
+	text-align: right;/*değişti*/
+}
+.btn-style905:hover span {
+	right: -100%;
+	/*değişti*/
+}
+.btn-style905:hover::before {
+	left: 70%;
+}
+/*değişti*/
+.btn-style905:hover::after {
+	left: 70%;/*değişti*/
+}
+
+
+
+
+
+
+
+
+/*-------------------- SON -------------- */
