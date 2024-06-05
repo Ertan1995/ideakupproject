@@ -558,7 +558,7 @@
 }
 
 
-/* Click butonun sağ yada soldan efektli olmasını alttaki cssler ile ayarlıyoruz */
+/* 6. ROW --- Click me butonun sağ yada soldan efektli olmasını alttaki cssler ile ayarlıyoruz */
 
 .btn-style904 span {
 	left: -0.5em;
@@ -611,6 +611,133 @@
 .btn-style905:hover::after {
 	left: 70%;/*değişti*/
 }
+
+
+
+
+/*7. ROW IŞILTILI BUTTON LİGHT CSS*/
+
+
+.buttonlight {
+	position: relative;
+	padding: 16px 30px;
+	font-size: 1.5rem;
+	color: var(--color);
+	border-radius: 10px;
+	text-shadow: 0 0 15px var(--color);
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	transition: 0.5s;
+	z-index: 1;
+  }
+  
+  .buttonlight:hover {
+	color: #fff;
+	box-shadow: 0 0 0px var(--color);
+  }
+  
+  .buttonlight::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	border-radius: 10px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--color);
+	z-index: -1;
+	transform: scale(0);
+	transition: 0.5s;
+  }
+  
+  .buttonlight:hover::before {
+	transform: scale(1);
+	transition-delay: 0.5s;
+	box-shadow: 0 0 10px var(--color),
+	  0 0 30px var(--color),
+	  0 0 60px var(--color);
+  }
+  
+
+
+
+
+
+  /*  -  - - - - 8. ROW CSS- - - - -- - - - - - */
+ 
+ 
+.type--A{
+	--line_color : #555555 ;
+	--back_color : #FFECF6  ;
+  }
+  
+  .linebutton{
+	  position : relative ;
+	  z-index : 0 ;
+	  width : 240px ;
+	  height : 56px ;
+	  text-decoration : none ;
+	  font-size : 14px ; 
+	  font-weight : bold ;
+	  color : var(--line_color) ;
+	 
+	  transition : all .3s ease ;
+  }
+  .button__text{
+	  display : flex ;
+	  justify-content : center ;
+	  align-items : center ;
+	  width : 100% ;
+	  height : 100% ;
+  }
+  .linebutton::before,
+  .linebutton::after,
+  .button__text::before,
+  .button__text::after{
+	  content : '' ;
+	  position : absolute ;
+	  height : 3px ;
+	  border-radius : 2px ;
+	  background : var(--line_color) ;
+	  transition : all .5s ease ;
+  }
+  .linebutton::before{
+	  top : 0 ;
+	  right : 54px ;
+	  width : calc( 100% - 56px * 2 - 16px ) ;
+  }
+  .linebutton::after{
+	  top : 0 ;
+	  left : 54px ;
+	  width : 8px ;
+  }
+  .button__text::before{
+	  bottom : 0 ;
+	 left : 54px ;
+	  width : calc( 100% - 56px * 2 - 16px ) ;
+  }
+  .button__text::after{
+	  bottom : 0 ;
+	  right : 54px ;
+	  width : 8px ;
+  }
+  .linebutton:hover::before,
+  .linebutton:hover .button__text::before{
+	  width : 8px ;
+  }
+  .linebutton:hover::after,
+  .linebutton:hover .button__text::after{
+	  width : calc( 100% - 56px * 2 - 16px ) ;
+  }
+  
+  .containerline{
+	  width : 100% ;
+	  height : 300px ;
+	  display: flex;
+	justify-content: baseline;
+  }
+  /*--------------------- ------------------ */
 
 
 
