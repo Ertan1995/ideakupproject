@@ -1,0 +1,811 @@
+/* ---------------- YENİ BUTTON CSS ----------------------- */
+.ebut {
+	text-align: center;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	white-space: nowrap;
+	margin: 5px;
+	padding: 20px 0px;
+	width: 200px;
+	line-height: 24px;
+	color: #FFF;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border-radius: 10px;
+	z-index: 1;
+	text-decoration: none;
+	transition: all 0.2s linear 0s;
+}
+.wrapper {
+	filter: url('#goo');
+	display: flex !important;
+	justify-content: space-between !important;
+}
+
+.bg-darkred {
+	background-color: darkred;
+}
+
+.bg-lightblue {
+	background-color: #0cf;
+}
+
+.bg-lightgreen {
+	background-color: #00AF87;
+}
+
+.prelative {
+	position: relative;
+}
+
+/* 1. ROW CSS */
+.e-btn1:before,
+.e-btn1:after {
+	width: 5em;
+	height: 3.5em;
+	position: absolute;
+	content: "";
+	display: inline-block;
+	background: darkred;
+	border-radius: 50%;
+	transition: 1s ease;
+	transform: scale(0);
+	z-index: -1;
+}
+
+.e-btn1:before {
+	top: -25%;
+	left: 50%;
+}
+
+.e-btn1:after {
+	bottom: -25%;
+	right: 50%;
+}
+
+.e-btn1:hover:before,
+.e-btn1:hover:after {
+	transform: none;
+}
+
+/* */
+
+.e-btn2:before,
+.e-btn2:after {
+	border-radius: 25%;
+}
+
+/* */
+.e-btn3:before,
+.e-btn3:after {
+	background: rgba(139, 0, 0, 0.3);
+	/* darkred'in rgba versiyonu */
+}
+/* 1. ROW CSS SONU */
+
+
+/*		 2.ROW CSS */
+.hoverbutton {
+	transition: all 0.3s ease-in-out;
+	position: relative;
+	overflow: hidden;
+	background-color: #0cf;
+
+}
+
+.hoverbutton:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 10rem;
+	z-index: -2;
+}
+
+.hoverbutton:before {
+	content: "";
+	position: absolute;
+	box-sizing: border-box;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background-color: #008fb3;
+	transition: all 0.3s ease-in-out;
+	z-index: -1;
+}
+
+.hoverbutton:hover {
+	color: #fff;
+}
+
+.hoverbutton:hover:before {
+	width: 100%;
+	transform: translateX(100%);
+}
+
+
+/* 2. hoverbutton2 */
+.hoverbutton2:before {
+	transform: translateX(-100%);
+}
+
+.hoverbutton2:hover:before {
+	width: 100%;
+	transform: translateX(0%);
+}
+
+/* 3. hoverbutton3 */
+.hoverbutton3:before {
+
+	left: auto;
+	/* Sol taraftan ayrılarak pseudo-elementin sağa yerleşmesi için left'i otomatik olarak ayarlıyoruz */
+	right: 0;
+	/* Sağ taraftan başlaması için right kullanıyoruz */
+
+	transform: translateX(100%);
+}
+
+.hoverbutton3:hover:before {
+	width: 100%;
+	transform: translateX(0%);
+}
+/* 4. hoverbutton */
+.hoverbutton4:before {
+	content: "";
+	position: absolute;
+	top: -100%;
+	/* Aşağıdan başlayacak, butonun tam altında */
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #008fb3;
+	transition: top 0.3s;
+	/* Top değeri ile animasyon yapacağız */
+	z-index: -1;
+}
+
+.hoverbutton4:hover {
+	color: white;
+}
+
+.hoverbutton4:hover:before {
+	top: 0;
+	/* Hover durumunda yüksekliği 0'a çekerek aşağıdan yukarıya çıkmasını sağlıyoruz */
+}
+
+/* 5. hoverbutton5 */
+.hoverbutton5 {
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 1rem;
+	letter-spacing: 0.15rem;
+	transition: all 0.3s;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	background-color: #0cf;
+}
+
+.hoverbutton5:before {
+	content: "";
+	position: absolute;
+	top: 100%;
+	/* Aşağıdan başlayacak, butonun tam altında */
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #008fb3;
+	transition: top 0.3s;
+	/* Top değeri ile animasyon yapacağız */
+	z-index: -1;
+}
+
+.hoverbutton5:hover {
+	color: white;
+}
+
+.hoverbutton5:hover:before {
+	top: 0;
+	/* Hover durumunda yüksekliği 0'a çekerek aşağıdan yukarıya çıkmasını sağlıyoruz */
+}
+
+/* 2. ROW CSS SONU */
+
+
+
+
+
+/* 3.ROW  */
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.8s ease;
+	position: relative;
+	border: 1.5px solid #111;
+	border-radius: 10px;
+	color: #000;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.btn::before,
+.btn::after {
+	position: absolute;
+	display: block;
+	content: "";
+	width: 100%;
+	height: 100%;
+}
+
+.btn7 {
+	border: none;
+}
+
+.btn7:before,
+.btn7:after {
+	border: 2px solid #111;
+	transition: all 100ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.btn7:hover:after {
+	width: 63px;
+	animation: anim7a 1.5s infinite linear;
+}
+
+.btn7:hover:before {
+	width: 63px;
+	animation: anim7b 1.5s infinite linear;
+}
+
+@keyframes anim7a {
+	from {
+		transform: rotate(0turn);
+	}
+
+	to {
+		transform: rotate(1turn);
+	}
+}
+
+@keyframes anim7b {
+	from {
+		transform: rotate(0.125turn);
+	}
+
+	to {
+		transform: rotate(1.125turn);
+	}
+}
+
+/* 3.butonun 2.hali */
+
+.btn7-2:hover:after {
+	width: 63px;
+	animation: anim7aa 1.5s infinite linear;
+}
+
+.btn7-2:hover:before {
+	width: 63px;
+	animation: anim7ba1.5s infinite linear;
+}
+
+@keyframes anim7aa {
+	from {
+		transform: rotate(0turn);
+	}
+
+	to {
+		transform: rotate(1turn);
+	}
+}
+
+@keyframes anim7ba {
+	from {
+		transform: rotate(-0.125turn);
+	}
+
+	to {
+		transform: rotate(-1.125turn);
+	}
+}
+/* 3. ROW CSS SONU */
+
+
+
+
+/* 4. Row Css --------------- --------------------- ----------------- ---------------- ------------*/
+
+.anim-button {
+	position: relative;
+	padding-inline: green;
+	padding-block: brown;
+	box-shadow: 0px 0px 0px gray;
+	outline: none;
+	transform: translateZ(0);
+	transition: all 0.2 ease;
+}
+
+.anim-button:hover {
+	top: -10px;
+	transition: 0.3s;
+	box-shadow: 0px 10px 20px gray;
+	transform: rotateZ(2deg);
+}
+
+.anim-button:active {
+	top: 0px;
+	box-shadow: 0px 0px 0px gray;
+}
+
+/* 4. Row 2. Button CSS */
+.anim-button2:hover {
+	transform: rotateX(7deg);
+}
+
+/* 5. ROW */
+.effect {
+	position: relative;
+	text-transform: capitalize !important;
+
+}
+.effect:before {
+	content: "\eb1b";
+	font-size: 15px;
+	color: white;
+	font-family: "font-icons";
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	opacity: 0;
+	height: 100%;
+	width: 40px;
+	transition: all 0.2s linear 0s;
+}
+
+.effect:hover {
+	color: white;
+}
+
+.effect:hover::before {
+	opacity: 1;
+	text-indent: 0px;
+}
+
+/* effect-1 styles */
+
+.effect-1:hover {
+	text-indent: 20px;
+}
+
+.effect.effect-1:before {
+	left: 0;
+}
+
+/* effect-2 styles */
+.effect-2:before {
+	right: 0;
+}
+
+.effect-2:hover {
+	text-indent: -20px;
+}
+
+
+
+
+/* effect-3styles */
+.effect.effect-3{
+	transition: all 0.2s linear 0s;
+  }
+  .effect.effect-3:before {
+	content: "\e692";
+	font-family: "font-icons";
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 30px;
+	transform: scale(0, 1);
+	transition: all 0.2s linear 0s;
+  }
+  .effect.effect-3:hover {
+	text-indent: -9999px;
+  }
+  .effect.effect-3:hover:before {
+	transform: scale(1, 1);
+	text-indent: 0;
+  }
+
+
+/*5.ROW SONU */
+
+/* 6. ROW CSS */
+.click-btn {
+	display: flex;
+	font-family: "font-icons";
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	color: #000;
+	text-decoration: none;
+	transition: all 0.35s;
+	box-sizing: border-box;
+	color: #fff;
+	overflow: hidden;
+}
+
+.click-btn span {
+	font-family: "font-icons";
+	transition: all 0.25s;
+	text-align: center;
+	position: relative;
+}
+
+.click-btn::before,
+.click-btn::after {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	background-color: rgba(252, 252, 251, 0.572);
+	transition: all 0.25s;
+	color: #fff;
+
+}
+
+.click-btn::before {
+	width: 25px;
+	content: "\f007";
+	/* FONT AWESOME İCONLARININ CONTENT CODLARI İLE DEĞİŞTİRİLEBİLİR*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "FontAwesome";
+	font-size: 10px;
+	font-weight: bold;
+	text-indent: 5px;
+	z-index: 1;
+}
+
+.click-btn::after {
+	width: 100%;
+	transform: translate(100%, 0);
+	content: attr(data-hover);
+	text-indent: 8px;
+}
+
+.click-btn:hover {
+	border-color: rgba(223, 183, 148, 0.73);
+}
+
+
+/* 6. ROW --- Click me butonun sağ yada soldan efektli olmasını alttaki cssler ile ayarlıyoruz */
+
+.btn-style904 span {
+	left: -0.5em;
+}
+.btn-style904::before,
+.btn-style904::after {
+	right: 0;
+}
+.btn-style904::before {
+	border-radius: 50% 0 0 50%;
+}
+.btn-style904::after {
+	text-align: left;
+}
+.btn-style904:hover span {
+	left: -100%;
+}
+.btn-style904:hover::before {
+	right: 70%;
+}
+.btn-style904:hover::after {
+	right: 70%;
+}
+/* ------------     btn-style905 CSS   -------------------- */
+.btn-style905 span {
+	right: -0.5em;
+	/*değişti*/
+}
+.btn-style905::before,
+.btn-style905::after {
+	left: 0;
+	/*değişti*/
+}
+.btn-style905::before {
+	border-radius: 0 50% 50% 0;
+	/*değişti*/
+}
+.btn-style905::after {
+	transform: translate(-100%, 0);
+	/*değişti*/
+	text-align: right;
+	/*değişti*/
+}
+.btn-style905:hover span {
+	right: -100%;
+	/*değişti*/
+}
+.btn-style905:hover::before {
+	left: 70%;
+}
+/*değişti*/
+.btn-style905:hover::after {
+	left: 70%;
+	/*değişti*/
+}
+/* 6. ROW CSS SONU   */
+
+
+
+
+/*7. ROW IŞILTILI BUTTON LİGHT CSS ---------------- ----------------- ------------*/
+
+.buttonlight {
+	position: relative;
+	padding: 16px 30px;
+	font-size: 1.5rem;
+	color: var(--color);
+	border-radius: 10px;
+	text-shadow: 0 0 15px var(--color);
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	transition: 0.5s;
+	z-index: 1;
+}
+
+.buttonlight:hover {
+	color: #fff;
+	box-shadow: 0 0 0px var(--color);
+}
+
+.buttonlight::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	border-radius: 10px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--color);
+	z-index: -1;
+	transform: scale(0);
+	transition: 0.5s;
+}
+
+.buttonlight:hover::before {
+	transform: scale(1);
+	transition-delay: 0.5s;
+	box-shadow: 0 0 10px var(--color),
+		0 0 30px var(--color),
+		0 0 60px var(--color);
+}
+
+
+/*  -  - - - - 8. ROW CSS- - - - -- - - - - - */
+
+
+
+.type--A {
+	--line_color: #555555;
+	--back_color: #FFECF6;
+}
+
+.linebutton {
+	position: relative;
+	z-index: 0;
+	width: 240px;
+	height: 56px;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: var(--line_color);
+
+	transition: all .3s ease;
+}
+
+.button__text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.linebutton::before,
+.linebutton::after,
+.button__text::before,
+.button__text::after {
+	content: '';
+	position: absolute;
+	height: 3px;
+	border-radius: 2px;
+	background: var(--line_color);
+	transition: all .5s ease;
+}
+
+.linebutton::before {
+	top: 0;
+	right: 54px;
+	width: calc(100% - 56px * 2 - 16px);
+}
+
+.linebutton::after {
+	top: 0;
+	left: 54px;
+	width: 8px;
+}
+
+.button__text::before {
+	bottom: 0;
+	left: 54px;
+	width: calc(100% - 56px * 2 - 16px);
+}
+
+.button__text::after {
+	bottom: 0;
+	right: 54px;
+	width: 8px;
+}
+
+.linebutton:hover::before,
+.linebutton:hover .button__text::before {
+	width: 8px;
+}
+
+.linebutton:hover::after,
+.linebutton:hover .button__text::after {
+	width: calc(100% - 56px * 2 - 16px);
+}
+
+
+
+/*--------------------- ------------------ */
+
+/* Ripple effect */
+.ripple {
+	background-color: #008fb3;
+	background-position: center;
+	transition: background 0.8s;
+}
+
+.ripple:hover {
+	background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+
+.ripple:active {
+	background-color: #6eb9f7;
+	background-size: 100%;
+	transition: background 0s;
+}
+
+/* 9.ROW 2. Button Css*/
+@import url("https://fonts.googleapis.com/css?family=Rubik:500");
+
+.ripple2 {
+
+	box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.5);
+	line-height: 1.25;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: #008fb3;
+	color: white;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	transition: background-color 0.6s ease;
+}
+
+.ripple2:after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 50%;
+	left: 50%;
+	top: var(--mouse-y);
+	left: var(--mouse-x);
+	transform-style: flat;
+	transform: translate3d(-50%, -50%, 0);
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 100%;
+	transition:width 0.3s ease, height 0.3s ease;
+}
+
+.ripple2:focus,
+.ripple2:hover {
+	background-color: #008fb3;
+}
+
+.ripple2:active:after {
+	width: 300px;
+	height: 300px;
+}
+
+
+
+/* 10.Row ----------- -------------*/
+
+
+  .example_d {
+	border: 4px solid rgb(0, 204, 255);
+	color: #0cf;
+	}
+	.example_d:hover {
+		background-color:rgba(0,143,179, 0.2);
+	color: rgb(0, 143, 179);
+	border-radius: 50px;
+	border-color: #008fb3 ;
+	transition: all 0.3s ease 0s;
+	}
+	
+	
+/* 11.ROW CSS */
+
+  
+.ert-flip {
+	opacity: 1;
+	outline: 0;
+	color: #fff;
+	line-height: 40px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	font-family: "Open Sans";
+	text-transform: uppercase;
+  }
+  .ert-flip:hover:after {
+	opacity: 1;
+	transform: translateY(0) rotateX(0);
+  }
+  .ert-flip:hover:before {
+	opacity: 0;
+	transform: translateY(50%) rotateX(90deg);
+  }
+  .ert-flip:after {
+	top: 0;
+	left: 0;
+	opacity: 0;
+	width: 100%;
+	color: #323237;
+	display: block;
+	transition: 0.5s;
+	position: absolute;
+	background: #b4b4b5;
+	content: attr(data-back);
+	transform: translateY(-50%) rotateX(90deg);
+  }
+  .ert-flip:before {
+	top: 0;
+	left: 0;
+	opacity: 1;
+	color: #adadaf;
+	display: block;
+	padding: 0 30px;
+	line-height: 40px;
+	transition: 0.5s;
+	position: relative;
+	background: #323237;
+	content: attr(data-front);
+	transform: translateY(0) rotateX(0);
+  }
+
+
+  /*-------------------- SON -------------- */
